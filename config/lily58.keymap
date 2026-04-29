@@ -6,6 +6,7 @@
 
 #include "swe_keys.h"
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 #define DEFAULT     0
@@ -33,41 +34,41 @@
 
         default_layer {
             bindings = <
-&kp ESC     &kp N1  &kp N2  &kp N3         &kp N4          &kp N5                                   &kp N6     &kp N7      &kp N8     &kp N9   &kp N0        &kp GRAVE
-&kp TAB     &kp Q   &kp W   &kp E          &kp R           &kp T                                    &kp J      &kp L       &kp U      &kp Y    &kp SE_OO     &kp SE_AE
-&kp LSHIFT  &kp A   &kp S   &kp D          &kp F           &kp G                                    &kp M      &kp N       &kp E      &kp I    &kp O         &kp SE_AA
-&kp LCTRL   &kp Z   &kp X   &kp C          &kp V           &kp B        &kp HOME     &kp END        &kp K      &kp H       &kp COMMA  &kp DOT  &kp SE_MINUS  &kp ENTER
-                            &kp RIGHT_ALT  &lt 1 KP_ENTER  &lt 2 SPACE  &kp LCTRL    &kp BACKSPACE  &kp SPACE  &lt 3 RET2  &kp RCTRL
+&kp ESC         &kp N1  &kp N2  &kp N3         &kp N4          &kp N5                                   &kp N6     &kp N7      &kp N8     &kp N9   &kp N0     &kp GRAVE
+&kp TAB         &kp Q   &kp W   &kp E          &kp R           &kp T                                    &kp J      &kp L       &kp U      &kp Y    &kp P      &kp LEFT_BRACKET
+&kp LSHIFT      &kp A   &kp S   &kp D          &kp F           &kp G                                    &kp M      &kp N       &kp E      &kp I    &kp O      &kp RIGHT_BRACKET
+&lt 3 LEFT_GUI  &kp Z   &kp X   &kp C          &kp V           &kp B        &kp HOME     &kp END        &kp K      &kp H       &kp COMMA  &kp DOT  &kp SLASH  &kp ENTER
+                                &kp RIGHT_ALT  &lt 1 KP_ENTER  &lt 2 SPACE  &kp LCTRL    &kp BACKSPACE  &kp SPACE  &lt 2 RET2  &kp RCTRL
             >;
         };
 
-        qwerty_layer {
+        layer_2 {
             bindings = <
-&kp ESC     &kp N1  &kp N2  &kp N3  &kp N4     &kp N5                                   &kp N6   &kp N7     &kp N8     &kp N9   &kp N0        &kp GRAVE
-&kp TAB     &kp Q   &kp W   &kp E   &kp R      &kp T                                    &kp Y    &kp U      &kp I      &kp O    &kp P         &kp SE_AE
-&kp LSHIFT  &kp A   &kp S   &kp D   &kp F      &kp G                                    &kp H    &kp J      &kp K      &kp L    &kp SE_OO     &kp SE_AA
-&kp LCTRL   &kp Z   &kp X   &kp C   &kp V      &kp B        &kp HOME     &kp END        &kp N    &kp M      &kp COMMA  &kp DOT  &kp SE_MINUS  &kp RSHFT
-                            &td0    &lt 0 TAB  &lt 0 ENTER  &kp SPACE    &kp BACKSPACE  &kp DEL  &lt 0 ESC  &kp RCTRL
+&kt GRAVE     &trans  &trans  &trans  &trans  &trans                    &trans  &trans           &trans  &kt KP_NUMBER_9  &trans        &trans
+&trans        &trans  &trans  &trans  &trans  &trans                    &trans  &trans           &trans  &trans           &trans        &trans
+&kt CAPSLOCK  &trans  &trans  &trans  &trans  &trans                    &trans  &kp KP_NUMBER_1  &trans  &trans           &trans        &trans
+&trans        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans           &trans  &trans           &kp KP_ENTER  &trans
+                              &trans  &trans  &trans  &trans    &trans  &trans  &trans           &trans
             >;
         };
 
-        gaming_layer {
+        layer_3 {
             bindings = <
-&kp ESC     &kp N1  &kp N2  &kp N3        &kp N4     &kp N5                                   &kp N6   &kp N7     &kp N8     &kp N9   &kp N0        &kp GRAVE
-&kp TAB     &kp Q   &kp W   &kp E         &kp R      &kp T                                    &kp Y    &kp U      &kp I      &kp O    &kp P         &kp SE_AE
-&kp LSHIFT  &kp A   &kp S   &kp D         &kp F      &kp G                                    &kp H    &kp J      &kp K      &kp L    &kp SE_OO     &kp SE_AA
-&kp LCTRL   &kp Z   &kp X   &kp C         &kp V      &kp B        &kp HOME     &kp END        &kp N    &kp M      &kp COMMA  &kp DOT  &kp SE_MINUS  &kp RSHFT
-                            &kp LEFT_ALT  &lt 0 TAB  &lt 0 ENTER  &kp SPACE    &kp BACKSPACE  &kp DEL  &lt 0 ESC  &kp RCTRL
+&trans  &trans  &trans  &trans      &trans            &trans                          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans      &trans            &trans                          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans      &kp K_VOL_DN      &kp K_VOL_UP                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &kp K_PREV  &kp K_PLAY_PAUSE  &kp K_NEXT    &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans      &trans            &trans        &trans    &trans  &trans  &trans  &trans
             >;
         };
 
-        symbols_eng_layer {
+        layer_4 {
             bindings = <
-&kp ESC     &kp N1  &kp N2  &kp N3        &kp N4     &kp N5                                   &kp N6   &kp N7     &kp N8     &kp N9   &kp N0        &kp GRAVE
-&kp TAB     &kp Q   &kp W   &kp E         &kp R      &kp T                                    &kp Y    &kp U      &kp I      &kp O    &kp P         &kp SE_AE
-&kp LSHIFT  &kp A   &kp S   &kp D         &kp F      &kp G                                    &kp H    &kp J      &kp K      &kp L    &kp SE_OO     &kp SE_AA
-&kp LCTRL   &kp Z   &kp X   &kp C         &kp V      &kp B        &kp HOME     &kp END        &kp N    &kp M      &kp COMMA  &kp DOT  &kp SE_MINUS  &kp RSHFT
-                            &kp LEFT_ALT  &lt 0 TAB  &lt 0 ENTER  &kp SPACE    &kp BACKSPACE  &kp DEL  &lt 0 ESC  &kp RCTRL
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &trans  &trans      &trans                        &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans        &trans        &trans  &trans      &trans                        &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans        &trans        &trans  &trans      &trans                        &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans        &trans        &trans  &bt BT_PRV  &bt BT_NXT  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                        &trans  &trans      &trans      &trans    &trans  &trans  &trans  &trans
             >;
         };
     };
